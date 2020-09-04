@@ -1,2 +1,2 @@
-alias oc_get_pods_status="for namespace in \$(oc get namespaces -o custom-columns=NAME:.metadata.name | grep -v NAME) ; do oc get pods -n \$namespace | grep -v NAME | awk '{print \$1, \$4}'; done"
+alias oc_get_pods_status="for namespace in \$(oc get namespaces -o custom-columns=NAME:.metadata.name | grep -v NAME) ; do oc get pods -n \$namespace'; done"
 alias oc_get_pod_restarts="for namespace in \$(oc get namespaces -o custom-columns=NAME:.metadata.name | grep -v NAME) ; do oc get pods -n \$namespace | grep -v NAME | awk '{print \$1, \$4}'; done"
